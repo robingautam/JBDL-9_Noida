@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+    <!--<bean class="org.gfg.autowiring.Department" name="department12">
+        <property name="name" value="HR" />
+        <property name="function" value="Manage Human Resource" />
+    </bean>
+
+    <bean class="org.gfg.autowiring.Department" name="department13">
+        <property name="name" value="Operations" />
+        <property name="function" value="Manage Operation" />
+    </bean>-->
+
+
+
+    <!--<bean class="org.gfg.autowiring.Employee" name="employee" autowire="constructor">
+        <property name="id" value="1001" />
+        <property name="name" value="Robin" />
+    </bean>-->
+
+    <bean class="org.gfg.autowiring.Employee" name="employee">
+        <property name="id" value="1001" />
+        <property name="name" value="Robin" />
+    </bean>
+
+
+
+
+</beans>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+  <!--  <bean class="org.gfg.model.Student" id="student">
+        <property name="id">
+            <value>1</value>
+        </property>
+        <property name="name">
+            <value>Robin</value>
+        </property>
+        <property name="email">
+            <value>robin@gmail.com</value>
+        </property>
+    </bean>-->
+
+    <bean class="org.gfg.model.Student" id="student">
+        <property name="id" value="1" />
+        <property name="name" value="Robin" />
+        <property name="email" value="robin@gmail.com" />
+        <property name="friendList">
+            <list>
+                <value>AAkash</value>
+                <value>sagar</value>
+            </list>
+        </property>
+        <property name="subject">
+            <set>
+                <value>Hindi</value>
+                <value>English</value>
+                <value>Hindi</value>
+            </set>
+        </property>
+        <property name="marks" >
+            <map>
+                <entry key="Hindi" value="98" />
+                <entry key="English" value="30" />
+            </map>
+        </property>
+        <property name="address" >
+            <ref bean="address" />
+        </property>
+    </bean>
+
+
+
+  <!--  <bean id="student" class="org.gfg.model.Student" >
+        <constructor-arg value="1" />
+        <constructor-arg value="Robin" />
+        <constructor-arg value="robin@gmail.com" />
+
+    </bean>-->
+
+    <bean class="org.gfg.model.Address" id="address" >
+        <property name="line1" value="M.v phase-1" />
+        <property name="line2" value="delhi" />
+        <property name="city" value="New Delhi" />
+        <property name="pincode" value="110091" />
+    </bean>
+
+    <bean class="org.gfg.model.Addition" id="add">
+        <constructor-arg value="1" type="int" />
+        <constructor-arg value="2" type="int"/>
+    </bean>
+
+    <bean class="org.gfg.model.Person" id="person" p:name="Aakash" p:email="aakash@gmail.com" />
+
+
+    <!-- Bean Inheritance  -->
+
+    <bean class="org.gfg.beanInheritance.Parent" id="parent" name="ch">
+        <property name="var1" value="1" />
+    </bean>
+
+    <bean class="org.gfg.beanInheritance.Child" id="child" parent="parent" name="c1,c2" >
+        <property name="var2" value="2"/>
+        <property name="var3" value="3" />
+    </bean>
+
+    <alias name="ch" alias="calias" />
+
+
+</beans>
